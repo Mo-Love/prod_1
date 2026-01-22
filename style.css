@@ -25,10 +25,9 @@ header {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #ff0000; /* Червоний для лого */
+  height: 40px; /* Висота лого в header */
+  width: auto; /* Зберігає пропорції */
+  object-fit: contain; /* Не спотворює */
 }
 
 nav a {
@@ -107,10 +106,9 @@ nav a:hover {
 }
 
 .logo-hero {
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #ff0000; /* Червоний для лого в hero */
+  height: clamp(50px, 10vw, 100px); /* Масштабується для hero */
+  width: auto;
+  object-fit: contain;
 }
 
 .sections-preview {
