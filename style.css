@@ -122,6 +122,11 @@ nav a:hover {
   margin: 0 auto;
 }
 
+.sections-preview a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   background: #111; /* Темно-чорний для карток */
   padding: 60px 40px;
@@ -155,12 +160,86 @@ nav a:hover {
   color: #ff0000; /* Червоний для заголовка */
 }
 
+.page-content {
+  padding: 150px 5% 100px; /* Відступ зверху для фіксованого header */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-content h1 {
+  font-size: 3rem;
+  color: #ff0000; /* Червоний заголовок */
+  margin-bottom: 1.5rem;
+}
+
+.page-content ul {
+  list-style-type: none;
+}
+
+.page-content ul li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.page-content ul li::before {
+  content: "•";
+  color: #ff0000;
+  position: absolute;
+  left: 0;
+}
+
+.page-content form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.page-content label {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.page-content input, .page-content textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: #111;
+  border: 1px solid #222;
+  color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.page-content button {
+  padding: 1rem;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.page-content button:hover {
+  background: #cc0000;
+}
+
 footer {
   padding: 60px 5% 40px;
   text-align: center;
   border-top: 1px solid #222;
   font-size: 0.9rem;
   color: #888;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-top: 1rem;
+}
+
+footer a:hover {
+  color: #ff0000;
 }
 
 .social a {
