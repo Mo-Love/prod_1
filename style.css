@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #000000; /* Чорний фон */
+  background: #000000 no-repeat; /* Чорний фон, без повтору */
   color: #e0e0e0;
   line-height: 1.5;
 }
