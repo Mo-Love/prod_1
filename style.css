@@ -11,7 +11,6 @@ body {
   background: #000000 no-repeat;
   color: #ffffff;
   line-height: 1.5;
-  overflow-x: hidden; /* Для cyberpunk-ефектів */
 }
 
 header {
@@ -25,22 +24,12 @@ header {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   z-index: 100;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Неоновий червоний glow */
-  animation: fadeIn 1s ease-in-out; /* Fade-in анімація */
 }
 
 .logo {
   height: 40px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 5px #ff0000); /* Неоновий glow для лого */
-  transition: transform 0.3s, filter 0.3s;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px #ff0000);
-  animation: glitch 0.5s; /* Глюк на hover */
 }
 
 nav a {
@@ -49,14 +38,11 @@ nav a {
   margin-left: 24px;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.2s, text-shadow 0.2s;
-  text-shadow: 0 0 2px rgba(255, 0, 0, 0.5); /* Легкий неон */
+  transition: color 0.2s;
 }
 
 nav a:hover {
   color: #ff0000;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; /* Сильний неоновий glow */
-  animation: glitch 0.3s; /* Глюк-ефект */
 }
 
 .hero {
@@ -64,7 +50,6 @@ nav a:hover {
   height: 100vh;
   min-height: 680px;
   overflow: hidden;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .video-wrapper {
@@ -85,7 +70,7 @@ nav a:hover {
   min-width: 100vw;
   min-height: 56.25vw;
   transform: translate(-50%, -50%);
-  filter: brightness(0.45) drop-shadow(0 0 20px rgba(255, 0, 0, 0.2)); /* Неоновий ефект на відео */
+  filter: brightness(0.45);
 }
 
 .hero-overlay {
@@ -112,8 +97,6 @@ nav a:hover {
   margin-bottom: 0.5rem;
   line-height: 1;
   color: #ff0000;
-  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; /* Неоновий glow */
-  animation: pulse 2s infinite; /* Pulsing анімація */
 }
 
 .hero-left p {
@@ -121,7 +104,6 @@ nav a:hover {
   font-weight: 300;
   opacity: 0.9;
   color: #ffffff;
-  text-shadow: 0 0 3px rgba(255, 0, 0, 0.3);
 }
 
 .hero-right {
@@ -132,8 +114,6 @@ nav a:hover {
   height: clamp(50px, 10vw, 100px);
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px #ff0000);
-  animation: glitch 1s infinite alternate; /* Постійний глюк для cyberpunk */
 }
 
 .sections-preview {
@@ -143,7 +123,6 @@ nav a:hover {
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
-  animation: fadeIn 1s ease-in-out 0.5s; /* Затримка для fade-in */
 }
 
 .sections-preview a {
@@ -157,14 +136,11 @@ nav a:hover {
   border-radius: 12px;
   border: 1px solid #222;
   transition: all 0.3s ease;
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Неоновий бордер */
 }
 
 .card:hover {
   transform: translateY(-12px);
   border-color: #ff0000;
-  box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
-  animation: glitch 0.5s;
 }
 
 .card h2 {
@@ -173,7 +149,6 @@ nav a:hover {
   text-transform: uppercase;
   margin-bottom: 1.2rem;
   color: #ff0000;
-  text-shadow: 0 0 5px #ff0000;
 }
 
 .philosophy {
@@ -182,7 +157,6 @@ nav a:hover {
   max-width: 900px;
   margin: 0 auto;
   background: #000000;
-  animation: fadeIn 1s ease-in-out 1s;
 }
 
 .philosophy h2 {
@@ -191,15 +165,12 @@ nav a:hover {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   color: #ff0000;
-  text-shadow: 0 0 10px #ff0000;
-  animation: pulse 3s infinite;
 }
 
 .page-content {
   padding: 150px 5% 100px;
   max-width: 900px;
   margin: 0 auto;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .page-content h1 {
@@ -208,13 +179,10 @@ nav a:hover {
   text-transform: uppercase;
   color: #ff0000;
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 10px #ff0000;
-  animation: glitch 1s infinite alternate;
 }
 
 .page-content p, .page-content ul li {
   color: #ffffff;
-  text-shadow: 0 0 2px rgba(255, 0, 0, 0.2);
 }
 
 .page-content ul {
@@ -232,7 +200,6 @@ nav a:hover {
   color: #ff0000;
   position: absolute;
   left: 0;
-  text-shadow: 0 0 5px #ff0000;
 }
 
 .page-content form {
@@ -254,12 +221,6 @@ nav a:hover {
   border: 1px solid #222;
   color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
-}
-
-.page-content input:focus, .page-content textarea:focus {
-  box-shadow: 0 0 10px #ff0000;
 }
 
 .page-content button {
@@ -268,14 +229,11 @@ nav a:hover {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 10px #ff0000;
-  animation: pulse 2s infinite;
+  transition: background 0.2s;
 }
 
 .page-content button:hover {
   background: #cc0000;
-  box-shadow: 0 0 20px #ff0000;
 }
 
 footer {
@@ -284,7 +242,6 @@ footer {
   border-top: 1px solid #222;
   font-size: 0.9rem;
   color: #ffffff;
-  animation: fadeIn 1s ease-in-out 1.5s;
 }
 
 footer a {
@@ -296,7 +253,6 @@ footer a {
 
 footer a:hover {
   color: #ff0000;
-  animation: glitch 0.3s;
 }
 
 .social a {
@@ -306,27 +262,6 @@ footer a:hover {
 
 .social a:hover {
   color: #ff0000;
-}
-
-/* Анімації для cyberpunk */
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); filter: hue-rotate(-90deg); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
-}
-
-@keyframes pulse {
-  0% { text-shadow: 0 0 5px #ff0000; }
-  50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
-  100% { text-shadow: 0 0 5px #ff0000; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* адаптивність */
