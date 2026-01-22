@@ -287,33 +287,47 @@ footer a:hover {
   
   /* Плейсхолдер для бургер-меню (три лінії) */
   .menu-toggle {
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    position: relative;
-  }
-  
-  .menu-toggle span {
-    background: #ffffff;
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s;
-  }
-  
-  .menu-toggle span:nth-child(1) { top: 0; }
-  .menu-toggle span:nth-child(2) { top: 11px; }
-  .menu-toggle span:nth-child(3) { top: 22px; }
-  
-  /* Для показу меню з JS: додай class 'active' до nav */
-  nav.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.menu-toggle span {
+  background: #ffffff;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 11px; }
+.menu-toggle span:nth-child(3) { top: 22px; }
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+nav.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
   
   .hero-overlay {
     flex-direction: column;
