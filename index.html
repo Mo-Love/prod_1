@@ -26,20 +26,22 @@
 
   <main>
     <section class="hero">
-      <div class="video-placeholder">
-        <!-- 
-          Тут або <video>, або просто картинка-прев'ю з play-кнопкою 
-          Поки що картинка + текст
-        -->
-        <img src="https://via.placeholder.com/1280x720/0d0d0d/555555?text=Твоє+головне+відео+на+фон" alt="Головне відео">
-        <div class="hero-overlay">
-          <div class="hero-text">
-            <h1>Привіт, ми продакшн</h1>
-            <p>ось наших історій та філософія</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/6AYAWmk8dQs?autoplay=1&mute=1&loop=1&playlist=6AYAWmk8dQs&controls=0&modestbranding=1&showinfo=0&rel=0" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+      title="Головне відео">
+    </iframe>
+  </div>
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Привіт, ми продакшн</h1>
+      <p>ось наших історій та філософія</p>
+    </div>
+  </div>
+</section>
 
     <section class="sections-preview">
       <div class="card" id="video">
