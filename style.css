@@ -11,14 +11,14 @@ body {
   background: #000000 no-repeat;
   color: #ffffff;
   line-height: 1.5;
-  font-size: 0.9rem; /* Зменшений шрифт для всього тексту */
+  font-size: 0.9rem;
 }
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 5%; /* Менші відступи */
+  padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@ header {
 }
 
 .logo {
-  height: 35px; /* Зменшена висота лого */
+  height: 35px;
   width: auto;
   object-fit: contain;
 }
@@ -36,8 +36,8 @@ header {
 nav a {
   color: #ffffff;
   text-decoration: none;
-  margin-left: 20px; /* Менші відступи */
-  font-size: 0.85rem; /* Зменшений шрифт для меню */
+  margin-left: 20px;
+  font-size: 0.85rem;
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -49,7 +49,7 @@ nav a:hover {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 600px; /* Зменшена мінімальна висота */
+  min-height: 600px;
   overflow: hidden;
 }
 
@@ -80,7 +80,7 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 30px 5%; /* Менші відступи */
+  padding: 30px 5%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
   z-index: 2;
 }
@@ -92,7 +92,7 @@ nav a:hover {
 
 .hero-left h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(1.8rem, 5vw, 3.5rem); /* Зменшений шрифт */
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 0.4rem;
@@ -101,7 +101,7 @@ nav a:hover {
 }
 
 .hero-left p {
-  font-size: clamp(0.9rem, 2.5vw, 1.3rem); /* Зменшений шрифт */
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
   font-weight: 300;
   opacity: 0.9;
   color: #ffffff;
@@ -112,15 +112,15 @@ nav a:hover {
 }
 
 .logo-hero {
-  height: clamp(40px, 8vw, 80px); /* Зменшена висота */
+  height: clamp(40px, 8vw, 80px);
   width: auto;
   object-fit: contain;
 }
 
 .sections-preview {
-  padding: 100px 5% 60px; /* Менші відступи */
+  padding: 100px 5% 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Менші картки */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -133,7 +133,7 @@ nav a:hover {
 
 .card {
   background: #111;
-  padding: 50px 30px; /* Менші падінги */
+  padding: 50px 30px;
   border-radius: 12px;
   border: 1px solid #222;
   transition: all 0.3s ease;
@@ -146,7 +146,7 @@ nav a:hover {
 
 .card h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem; /* Зменшений шрифт */
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   color: #ff0000;
@@ -162,7 +162,7 @@ nav a:hover {
 
 .philosophy h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem; /* Зменшений шрифт */
+  font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
   color: #ff0000;
@@ -176,7 +176,7 @@ nav a:hover {
 
 .page-content h1 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.5rem; /* Зменшений шрифт */
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #ff0000;
   margin-bottom: 1.2rem;
@@ -184,7 +184,7 @@ nav a:hover {
 
 .page-content p, .page-content ul li {
   color: #ffffff;
-  font-size: 0.9rem; /* Зменшений шрифт */
+  font-size: 0.9rem;
 }
 
 .page-content ul {
@@ -271,63 +271,71 @@ footer a:hover {
 /* Адаптивність для мобільних */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row; /* Лого ліворуч, бургер праворуч */
+    justify-content: space-between;
+    gap: 0;
     padding: 12px 5%;
   }
   
   .logo {
-    height: 30px; /* Ще менший на мобільних */
+    height: 30px;
+  }
+  
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+  }
+  
+  .menu-toggle span {
+    background: #ffffff;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .menu-toggle span:nth-child(1) { top: 0; }
+  .menu-toggle span:nth-child(2) { top: 11px; }
+  .menu-toggle span:nth-child(3) { top: 22px; }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 11px;
   }
   
   nav {
-    display: none; /* Ховаємо меню на мобільних */
-    /* Якщо хочеш показати як колонку: display: flex; flex-direction: column; align-items: center; */
+    display: none; /* Ховаємо за дефолтом */
+    position: absolute;
+    top: 100%; /* Під header */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
   }
   
-  /* Плейсхолдер для бургер-меню (три лінії) */
-  .menu-toggle {
-  display: block;
-  cursor: pointer;
-  width: 30px;
-  height: 25px;
-  position: relative;
-}
-
-.menu-toggle span {
-  background: #ffffff;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.menu-toggle span:nth-child(1) { top: 0; }
-.menu-toggle span:nth-child(2) { top: 11px; }
-.menu-toggle span:nth-child(3) { top: 22px; }
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 11px;
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 11px;
-}
-
-nav.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
+  nav.active {
+    display: block;
+  }
+  
+  nav a {
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+  }
   
   .hero-overlay {
     flex-direction: column;
@@ -400,9 +408,9 @@ nav.active {
     padding: 10px 5%;
   }
   
-  nav.active a {
-    margin: 6px 0;
-    font-size: 0.8rem;
+  nav a {
+    margin: 10px 0;
+    font-size: 0.9rem;
   }
   
   .hero-left h1 {
