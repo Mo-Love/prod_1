@@ -8,17 +8,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Нові шрифти -->
 </head>
 <body>
 
   <header>
     <img src="logo.png" alt="Назва студії" class="logo">
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <nav>
       <a href="video.html">ВІДЕО</a>
       <a href="photo.html">ФОТО</a>
@@ -30,7 +25,58 @@
     </nav>
   </header>
 
-  <!-- Решта коду без змін -->
+  <main>
+    <section class="hero">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/6AYAWmk8dQs?autoplay=1&mute=1&loop=1&playlist=6AYAWmk8dQs&controls=0&modestbranding=1&showinfo=0&rel=0" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          title="Головне відео">
+        </iframe>
+      </div>
+      <div class="hero-overlay">
+        <div class="hero-left">
+          <h1>Привіт, ми продакшн</h1>
+          <p>ось наших історій та філософія</p>
+        </div>
+        <div class="hero-right">
+          <img src="logo.png" alt="Назва студії" class="logo-hero">
+        </div>
+      </div>
+    </section>
+
+    <section class="sections-preview">
+      <a href="video.html" class="card">
+        <h2>ВІДЕО</h2>
+        <p>Кожен розділ кліпабельний, в одному рядку без рамок, тех. відео, наповнення</p>
+      </a>
+      
+      <a href="photo.html" class="card">
+        <h2>ФОТО</h2>
+        <p>Портрети · Предметна зйомка · Репортаж</p>
+      </a>
+      
+      <a href="sound.html" class="card">
+        <h2>ЗВУК</h2>
+        <p>Озвучення · Підбір музики · Звуковий дизайн</p>
+      </a>
+    </section>
+
+    <section class="philosophy">
+      <h2>Наша філософія</h2>
+      <p>Робимо так, щоб історія виглядала чесно, красиво і сучасно. Без зайвого пафосу, але з повагою до деталей.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 · Назва студії · Lviv, Ukraine</p>
+    <div class="social">
+      <a href="#">Instagram</a> • <a href="#">YouTube</a> • <a href="#">Behance</a>
+    </div>
+    <a href="terms.html">Умови та конфіденційність</a>
+  </footer>
 
 </body>
 </html>
