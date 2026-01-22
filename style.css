@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Montserrat', system-ui, sans-serif; /* Новий шрифт для тексту */
   background: #000000 no-repeat; /* Чорний фон, без повтору */
-  color: #e0e0e0;
+  color: #ffffff; /* Білий текст */
   line-height: 1.5;
 }
 
@@ -31,7 +31,7 @@ header {
 }
 
 nav a {
-  color: #ccc;
+  color: #ffffff; /* Білий текст */
   text-decoration: none;
   margin-left: 24px;
   font-size: 0.95rem;
@@ -88,8 +88,10 @@ nav a:hover {
 }
 
 .hero-left h1 {
+  font-family: 'Bebas Neue', sans-serif; /* Новий шрифт для заголовків */
   font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 700;
+  font-weight: 400; /* Bebas Neue зазвичай bold */
+  text-transform: uppercase; /* Верхній регістр, як на візитці */
   margin-bottom: 0.5rem;
   line-height: 1;
   color: #ff0000; /* Червоний для заголовка */
@@ -99,6 +101,7 @@ nav a:hover {
   font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
   opacity: 0.9;
+  color: #ffffff; /* Білий текст */
 }
 
 .hero-right {
@@ -139,7 +142,9 @@ nav a:hover {
 }
 
 .card h2 {
+  font-family: 'Bebas Neue', sans-serif; /* Новий шрифт для заголовків */
   font-size: 2.2rem;
+  text-transform: uppercase;
   margin-bottom: 1.2rem;
   color: #ff0000; /* Червоний для заголовків карток */
 }
@@ -153,7 +158,9 @@ nav a:hover {
 }
 
 .philosophy h2 {
+  font-family: 'Bebas Neue', sans-serif; /* Новий шрифт */
   font-size: 3rem;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
   color: #ff0000; /* Червоний для заголовка */
 }
@@ -165,9 +172,15 @@ nav a:hover {
 }
 
 .page-content h1 {
+  font-family: 'Bebas Neue', sans-serif; /* Новий шрифт */
   font-size: 3rem;
+  text-transform: uppercase;
   color: #ff0000; /* Червоний заголовок */
   margin-bottom: 1.5rem;
+}
+
+.page-content p, .page-content ul li {
+  color: #ffffff; /* Білий текст */
 }
 
 .page-content ul {
@@ -196,7 +209,7 @@ nav a:hover {
 
 .page-content label {
   margin-bottom: 0.5rem;
-  color: #ccc;
+  color: #ffffff; /* Білий текст */
 }
 
 .page-content input, .page-content textarea {
@@ -204,14 +217,14 @@ nav a:hover {
   padding: 0.8rem;
   background: #111;
   border: 1px solid #222;
-  color: #e0e0e0;
+  color: #ffffff; /* Білий текст */
   border-radius: 4px;
 }
 
 .page-content button {
   padding: 1rem;
   background: #ff0000;
-  color: #fff;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   transition: background 0.2s;
@@ -226,11 +239,11 @@ footer {
   text-align: center;
   border-top: 1px solid #222;
   font-size: 0.9rem;
-  color: #888;
+  color: #ffffff; /* Білий текст */
 }
 
 footer a {
-  color: #ccc;
+  color: #ffffff; /* Білий текст */
   text-decoration: none;
   display: block;
   margin-top: 1rem;
@@ -241,7 +254,7 @@ footer a:hover {
 }
 
 .social a {
-  color: #ccc;
+  color: #ffffff; /* Білий текст */
   text-decoration: none;
 }
 
